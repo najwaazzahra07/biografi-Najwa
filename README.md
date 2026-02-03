@@ -1,15 +1,16 @@
 # biografi-Najwa
 
-Halo! Namaku Najwa Azzahra.
-
-Aku adalah mahasiswa yang sedang belajar di bidang teknologi dan tertarik pada dunia jaringan komputer serta pemrograman.
+# Profil
+Halo! Namaku Najwa Azzahra. Aku adalah mahasiswa yang sedang belajar di bidang teknologi informasi dan tertarik pada dunia jaringan komputer, pemrograman serta perangkat keras.
 
 ## Pendidikan
-- Mahasiswa Teknik / IT
+- Mahasiswa Teknik Komputer/ IT
+- Menempuh pendidikan di Universitas Andalas
+- semester 3
 
 ## Hobi
 - Belajar hal baru
-- Nonton film
+- Olahraga
 - Dengerin musik
 
 ## Cita-cita
