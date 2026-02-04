@@ -73,9 +73,6 @@ function openModal(sectionName) {
         modalBody.innerHTML = content.content;
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
-        
-        // Add confetti effect
-        createConfetti();
     }
 }
 
@@ -145,64 +142,7 @@ function createRipple(element) {
     animate();
 }
 
-// Confetti effect function
-function createConfetti() {
-    const colors = ['#ffeaa7', '#74b9ff', '#fd79a8', '#a29bfe', '#55efc4', '#fab1a0'];
-    const confettiCount = 40;
-    
-    for (let i = 0; i < confettiCount; i++) {
-        setTimeout(() => {
-            const confetti = document.createElement('div');
-            confetti.style.position = 'fixed';
-            confetti.style.width = Math.random() * 10 + 5 + 'px';
-            confetti.style.height = confetti.style.width;
-            confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-            confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
-            confetti.style.pointerEvents = 'none';
-            confetti.style.zIndex = '10000';
-            confetti.style.left = Math.random() * 100 + '%';
-            confetti.style.top = '-20px';
-            confetti.style.opacity = '0.8';
-            
-            document.body.appendChild(confetti);
-            
-            animateConfetti(confetti);
-        }, i * 20);
-    }
-}
-
-function animateConfetti(element) {
-    let posY = -20;
-    let posX = parseFloat(element.style.left);
-    let velocityY = Math.random() * 3 + 2;
-    let velocityX = (Math.random() - 0.5) * 2;
-    let rotation = 0;
-    let rotationSpeed = (Math.random() - 0.5) * 10;
-    let opacity = 0.8;
-    
-    function animate() {
-        velocityY += 0.2;
-        posY += velocityY;
-        posX += velocityX;
-        rotation += rotationSpeed;
-        opacity -= 0.005;
-        
-        element.style.top = posY + 'px';
-        element.style.left = posX + '%';
-        element.style.transform = `rotate(${rotation}deg)`;
-        element.style.opacity = opacity;
-        
-        if (posY < window.innerHeight && opacity > 0) {
-            requestAnimationFrame(animate);
-        } else {
-            element.remove();
-        }
-    }
-    
-    animate();
-}
-
-// Floating particles in background
+// Profile image sparkle effect
 function createFloatingParticles() {
     const particleCount = 15;
     
@@ -254,86 +194,8 @@ function animateFloatingParticle(particle) {
     animate();
 }
 
-// Profile image sparkle effect
-const profileImage = document.querySelector('.profile-image');
-let isHovering = false;
-
-profileImage.addEventListener('mouseenter', function() {
-    isHovering = true;
-    createSparkles();
-});
-
-profileImage.addEventListener('mouseleave', function() {
-    isHovering = false;
-});
-
-function createSparkles() {
-    if (!isHovering) return;
-    
-    const sparkle = document.createElement('div');
-    sparkle.style.position = 'fixed';
-    sparkle.style.width = '4px';
-    sparkle.style.height = '4px';
-    sparkle.style.backgroundColor = '#fff';
-    sparkle.style.borderRadius = '50%';
-    sparkle.style.pointerEvents = 'none';
-    sparkle.style.zIndex = '100';
-    sparkle.style.boxShadow = '0 0 8px #fff';
-    
-    const rect = profileImage.getBoundingClientRect();
-    const angle = Math.random() * Math.PI * 2;
-    const distance = 60 + Math.random() * 20;
-    
-    sparkle.style.left = rect.left + rect.width / 2 + Math.cos(angle) * distance + 'px';
-    sparkle.style.top = rect.top + rect.height / 2 + Math.sin(angle) * distance + 'px';
-    
-    document.body.appendChild(sparkle);
-    
-    let opacity = 1;
-    function fadeOut() {
-        opacity -= 0.03;
-        sparkle.style.opacity = opacity;
-        
-        if (opacity > 0) {
-            requestAnimationFrame(fadeOut);
-        } else {
-            sparkle.remove();
-        }
-    }
-    
-    fadeOut();
-    
-    if (isHovering) {
-        setTimeout(createSparkles, 80);
-    }
-}
-
-// Easter egg - click profile name 3 times
-let nameClickCount = 0;
-const profileName = document.querySelector('.profile-name');
-
-profileName.addEventListener('click', () => {
-    nameClickCount++;
-    
-    if (nameClickCount === 3) {
-        createMegaConfetti();
-        nameClickCount = 0;
-    }
-});
-
-function createMegaConfetti() {
-    for (let i = 0; i < 100; i++) {
-        setTimeout(() => {
-            createConfetti();
-        }, i * 20);
-    }
-}
-
 // Initialize
 window.addEventListener('load', () => {
-    createFloatingParticles();
-    
     console.log('✨ Portfolio Najwa Azzahra');
     console.log('💡 Klik pada setiap tombol untuk melihat detailnya!');
-    console.log('🎁 Easter egg: Klik nama 3x untuk surprise!');
 });
