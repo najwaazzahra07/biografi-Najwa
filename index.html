@@ -3,70 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biografi - Najwa Azzahra</title>
+    <title>Najwa Azzahra - Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="profile-image">
-                <div class="image-placeholder">NA</div>
-            </div>
-            <h1 class="name">Najwa Azzahra</h1>
-            <p class="tagline">Mahasiswa Teknik Komputer/IT</p>
-        </header>
-
-        <section class="section">
-            <h2 class="section-title">Profil</h2>
-            <div class="card">
-                <p>Halo! Namaku Najwa Azzahra. Aku adalah mahasiswa yang sedang belajar di bidang teknologi informasi dan tertarik pada dunia jaringan komputer, pemrograman serta perangkat keras.</p>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title">Pendidikan</h2>
-            <div class="card">
-                <ul class="education-list">
-                    <li>
-                        <span class="icon">🎓</span>
-                        <div>
-                            <strong>Mahasiswa Teknik Komputer/IT</strong>
-                            <p>Universitas Andalas</p>
-                            <p class="semester">Semester 3</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title">Hobi</h2>
-            <div class="hobbies-grid">
-                <div class="hobby-card">
-                    <span class="hobby-icon">📚</span>
-                    <h3>Belajar hal baru</h3>
-                </div>
-                <div class="hobby-card">
-                    <span class="hobby-icon">⚽</span>
-                    <h3>Olahraga</h3>
-                </div>
-                <div class="hobby-card">
-                    <span class="hobby-icon">🎵</span>
-                    <h3>Dengerin musik</h3>
+    <div class="background-overlay"></div>
+    
+    <div class="main-container">
+        <div class="profile-card">
+            <!-- Profile Image -->
+            <div class="profile-image-wrapper">
+                <div class="profile-image">
+                    <div class="image-placeholder">NA</div>
                 </div>
             </div>
-        </section>
 
-        <section class="section">
-            <h2 class="section-title">Cita-cita</h2>
-            <div class="card goal-card">
-                <p>Ingin menjadi profesional di bidang teknologi dan terus mengembangkan skill di dunia IT.</p>
+            <!-- Name and Tagline -->
+            <h1 class="profile-name">Najwa Azzahra</h1>
+            <p class="profile-tagline">Mahasiswa Teknik Komputer/IT | Universitas Andalas</p>
+
+            <!-- Interactive Sections -->
+            <div class="sections-container">
+                <!-- Profil Section -->
+                <button class="section-btn" data-section="profil">
+                    <span class="section-label">Profil</span>
+                    <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </button>
+
+                <!-- Pendidikan Section -->
+                <button class="section-btn" data-section="pendidikan">
+                    <span class="section-label">Pendidikan</span>
+                    <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                        <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                    </svg>
+                </button>
+
+                <!-- Hobi Section -->
+                <button class="section-btn" data-section="hobi">
+                    <span class="section-label">Hobi</span>
+                    <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                </button>
+
+                <!-- Cita-cita Section -->
+                <button class="section-btn" data-section="cita-cita">
+                    <span class="section-label">Cita-cita</span>
+                    <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </button>
             </div>
-        </section>
 
-        <footer class="footer">
-            <p>&copy; 2024 Najwa Azzahra. All rights reserved.</p>
-        </footer>
+
+        </div>
+    </div>
+
+    <!-- Modal for Section Content -->
+    <div class="modal" id="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body" id="modal-body">
+                <!-- Content will be inserted here -->
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
