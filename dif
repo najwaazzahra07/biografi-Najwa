@@ -1,59 +1,34 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">iç
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biodata Najwa Azzahra</title>
+    <title>Profil Najwa Azzahra</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
-        <div class="header">
-            <img src="foto.jpg" alt="Foto Najwa" class="profile-img">
-            <h1>Najwa Azzahra</h1>
-            <p class="subtitle">Mahasiswa Teknik Komputer • Universitas Andalas</p>
-        </div>
-
         <div class="card">
-            <h2>Data Diri</h2>
-            <ul>
-                <li><strong>Nama:</strong> Najwa Azzahra</li>
-                <li><strong>NIM:</strong> 2411513004</li>
-                <li><strong>Jurusan:</strong> Teknik Komputer</li>
-                <li><strong>Universitas:</strong> Universitas Andalas</li>
-                <li><strong>Semester:</strong> 4</li>
-            </ul>
-        </div>
+            <div class="avatar">N</div>
 
-        <div class="card">
-            <h2>Tentang Saya</h2>
-            <p>
-                Saya adalah mahasiswa Teknik Komputer Universitas Andalas yang memiliki minat besar 
-                pada bidang teknologi, jaringan komputer, dan pengembangan sistem. 
-                Saya senang mempelajari hal baru serta terus mengembangkan keterampilan di dunia IT.
+            <h1 class="fade-in">Najwa Azzahra</h1>
+            <p class="subtitle fade-in delay1">Mahasiswa Teknologi Informasi</p>
+
+            <p class="description fade-in delay2">
+                Halo! Aku Najwa, mahasiswa yang sedang belajar di bidang 
+                <b>Teknologi Informasi</b>. Aku tertarik pada dunia 
+                <b>jaringan komputer</b>, <b>pemrograman</b>, dan teknologi digital.
             </p>
-        </div>
 
-        <div class="card">
-            <h2>Keahlian</h2>
-            <ul>
-                <li>Dasar Pemrograman</li>
-                <li>Jaringan Komputer</li>
-                <li>Perakitan & Troubleshooting Komputer</li>
-                <li>HTML & CSS Dasar</li>
-            </ul>
-        </div>
+            <div class="info fade-in delay3">
+                <div>🎓 Mahasiswa</div>
+                <div>💻 Web & Programming</div>
+                <div>🌐 Networking Enthusiast</div>
+            </div>
 
-        <div class="card">
-            <h2>Kontak</h2>
-            <p>Email: najwaazzahra0709@gmail.com</p>
-            <p>Instagram: <a href="https://www.instagram.com/najwa___0907" target="_blank">@najwa___0907</a></p>
+            <button class="btn">Lihat Portofolio</button>
         </div>
-
-        <footer>
-            <p>© 2026 Najwa Azzahra</p>
-        </footer>
     </div>
 
 </body>
