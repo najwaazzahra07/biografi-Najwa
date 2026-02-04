@@ -2,111 +2,56 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
   -webkit-tap-highlight-color: transparent;
 }
 
+/* ===== BACKGROUND COKLAT SMOOTH ===== */
 body {
-  font-family: 'Poppins', sans-serif;
-  height: 100vh;
-  overflow: hidden; /* KUNCI layar biar gak geser */
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  /* GRADIEN COKLAT */
   background: linear-gradient(135deg, #5c3b2e, #8b5e3c, #c08a5b);
+  background-attachment: fixed;
+
+  animation: fadeIn 1s ease;
 }
 
-/* ===== PARTIKEL DEKORASI (DIAM / FLOATING) ===== */
-.particles {
-  position: fixed;
+/* Animasi halus saat halaman muncul */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== WRAPPER ===== */
+.wrapper {
   width: 100%;
-  height: 100%;
-  z-index: 0;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
 }
 
-.particles::before,
-.particles::after {
-  content: "";
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  background-image:
-    radial-gradient(circle, rgba(255,255,255,0.25) 2px, transparent 2px),
-    radial-gradient(circle, rgba(255,255,255,0.15) 3px, transparent 3px);
-  background-size: 80px 80px, 120px 120px;
-  animation: floatParticles 25s linear infinite;
-}
-
-.particles::after {
-  animation-direction: reverse;
-  opacity: 0.6;
-}
-
-@keyframes floatParticles {
-  from { transform: translate(0, 0); }
-  to { transform: translate(-100px, -100px); }
-}
-
-/* ===== KONTEN UTAMA ===== */
-.container {
-  position: relative;
-  z-index: 1;
-  width: 90%;
-  max-width: 400px;
+/* ===== KARTU UTAMA ===== */
+.card {
+  width: 100%;
+  max-width: 380px;
+  padding: 30px 20px;
+  border-radius: 25px;
   text-align: center;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+  transition: 0.4s ease;
 }
 
-/* HEADER PROFIL */
-.profile-header {
-  margin-bottom: 30px;
-  color: white;
-}
-
+/* ===== AVATAR ===== */
 .avatar {
   width: 110px;
   height: 110px;
-  background: linear-gradient(135deg, #f5deb3, #e6c7a1);
-  border-radius: 50%;
   margin: 0 auto 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 36px;
-  font-weight: 600;
-  color: #5c3b2e;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-.profile-header h1 {
-  font-size: 24px;
-  margin-bottom: 6px;
-}
-
-.profile-header p {
-  font-size: 14px;
-  opacity: 0.9;
-}
-
-/* MENU */
-.menu {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.menu-item {
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(10px);
-  padding: 15px;
-  border-radius: 15px;
-  color: white;
-  font-size: 16px;
-  transition: 0.3s;
-}
-
-.menu-item:active {
-  transform: scale(0.97);
-  background: rgba(255,255,255,0.25);
-}
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f5deb3, #e6c7a1);
