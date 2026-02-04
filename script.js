@@ -3,7 +3,7 @@ const sectionContent = {
     profil: {
         title: 'Profil',
         content: `
-            <h2>👤 Profil</h2>
+            <h2>Profil</h2>
             <p>Halo! Namaku Najwa Azzahra. Aku adalah mahasiswa yang sedang belajar di bidang teknologi informasi dan tertarik pada dunia jaringan komputer, pemrograman serta perangkat keras.</p>
             <p>Aku senang mengeksplorasi teknologi baru dan terus mengembangkan kemampuan di bidang IT. Passion-ku adalah membuat solusi teknologi yang dapat membantu orang lain.</p>
         `
@@ -11,7 +11,7 @@ const sectionContent = {
     pendidikan: {
         title: 'Pendidikan',
         content: `
-            <h2>🎓 Pendidikan</h2>
+            <h2>Pendidikan</h2>
             <div class="info-item">
                 <h3>Mahasiswa Teknik Komputer/IT</h3>
                 <p>Universitas Andalas</p>
@@ -23,24 +23,21 @@ const sectionContent = {
     hobi: {
         title: 'Hobi',
         content: `
-            <h2>⭐ Hobi</h2>
+            <h2>Hobi</h2>
             <div class="hobby-list">
                 <div class="hobby-item">
-                    <div class="hobby-icon">📚</div>
                     <div class="hobby-text">
                         <h4>Belajar hal baru</h4>
                         <p>Senang mempelajari teknologi dan skill baru</p>
                     </div>
                 </div>
                 <div class="hobby-item">
-                    <div class="hobby-icon">⚽</div>
                     <div class="hobby-text">
                         <h4>Olahraga</h4>
                         <p>Menjaga kesehatan dengan aktivitas fisik</p>
                     </div>
                 </div>
                 <div class="hobby-item">
-                    <div class="hobby-icon">🎵</div>
                     <div class="hobby-text">
                         <h4>Dengerin musik</h4>
                         <p>Menikmati berbagai genre musik</p>
@@ -52,9 +49,8 @@ const sectionContent = {
     'cita-cita': {
         title: 'Cita-cita',
         content: `
-            <h2>🎯 Cita-cita</h2>
+            <h2>Cita-cita</h2>
             <div class="goal-box">
-                <div class="goal-icon">💼</div>
                 <p>Ingin menjadi profesional di bidang teknologi dan terus mengembangkan skill di dunia IT.</p>
             </div>
             <p style="margin-top: 20px;">Bercita-cita untuk menjadi seorang IT professional yang kompeten dan mampu berkontribusi dalam perkembangan teknologi di Indonesia. Ingin terus belajar dan berinovasi dalam menciptakan solusi teknologi yang bermanfaat.</p>
@@ -66,7 +62,6 @@ const sectionContent = {
 const modal = document.getElementById('modal');
 const modalBody = document.getElementById('modal-body');
 const modalOverlay = modal.querySelector('.modal-overlay');
-const modalClose = modal.querySelector('.modal-close');
 
 // Get all section buttons
 const sectionButtons = document.querySelectorAll('.section-btn');
@@ -102,7 +97,6 @@ sectionButtons.forEach(button => {
 });
 
 // Event listeners for closing modal
-modalClose.addEventListener('click', closeModal);
 modalOverlay.addEventListener('click', closeModal);
 
 // Close modal with Escape key
