@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Profil Najwa Azzahra</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
 
@@ -16,22 +17,34 @@
       <p>Mahasiswa Teknik Komputer / IT<br>Universitas Andalas</p>
     </div>
 
-    <div class="menu-item" onclick="toggleSection('profil')">👤 Profil</div>
+    <div class="menu-item" onclick="toggleSection('profil')">
+      <span>Profil</span>
+      <i data-feather="user"></i>
+    </div>
     <div id="profil" class="content">
       <p>Saya adalah mahasiswa Teknik Komputer yang memiliki minat pada pengembangan web, desain antarmuka, dan teknologi digital kreatif.</p>
     </div>
 
-    <div class="menu-item" onclick="toggleSection('pendidikan')">🎓 Pendidikan</div>
+    <div class="menu-item" onclick="toggleSection('pendidikan')">
+      <span>Pendidikan</span>
+      <i data-feather="book-open"></i>
+    </div>
     <div id="pendidikan" class="content">
       <p>Universitas Andalas — Program Studi Teknik Komputer<br>Fokus pada jaringan komputer dan pemrograman web.</p>
     </div>
 
-    <div class="menu-item" onclick="toggleSection('hobi')">⭐ Hobi</div>
+    <div class="menu-item" onclick="toggleSection('hobi')">
+      <span>Hobi</span>
+      <i data-feather="star"></i>
+    </div>
     <div id="hobi" class="content">
       <p>Saya suka mendesain, belajar coding, menonton film, dan eksplor hal-hal kreatif di dunia digital.</p>
     </div>
 
-    <div class="menu-item" onclick="toggleSection('citacita')">⏰ Cita-cita</div>
+    <div class="menu-item" onclick="toggleSection('citacita')">
+      <span>Cita-cita</span>
+      <i data-feather="target"></i>
+    </div>
     <div id="citacita" class="content">
       <p>Ingin menjadi seorang Software Engineer yang sukses dan bisa membuat teknologi yang bermanfaat bagi banyak orang.</p>
     </div>
@@ -40,6 +53,9 @@
 
   </div>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
+<script>
+  feather.replace()
+</script>
 </body>
 </html>
