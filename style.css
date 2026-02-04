@@ -113,3 +113,12 @@ body {
   opacity: 0.75;
   margin-top: 18px;
 }
+.menu-item i {
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.menu-item.active i {
+  transform: rotate(180deg);
+  opacity: 0.8;
+}
+
