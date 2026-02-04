@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Profil Najwa</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Najwa Azzahra</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- DEKOR BACKGROUND -->
-  <div class="decor">
-    <span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span>
-  </div>
-
   <div class="container">
+
     <div class="profile-header">
       <div class="avatar">NA</div>
       <h1>Najwa Azzahra</h1>
-      <p>Mahasiswa Teknik Komputer/IT | Universitas Andalas</p>
+      <p>Mahasiswa Teknik Komputer / IT<br>Universitas Andalas</p>
     </div>
 
-    <div class="menu">
-      <div class="menu-item">Profil</div>
-      <div class="menu-item">Pendidikan</div>
-      <div class="menu-item">Hobi</div>
-      <div class="menu-item">Cita-cita</div>
+    <div class="menu-item" onclick="toggleSection('profil')">👤 Profil</div>
+    <div id="profil" class="content">
+      <p>Saya adalah mahasiswa Teknik Komputer yang memiliki minat pada pengembangan web, desain antarmuka, dan teknologi digital kreatif.</p>
     </div>
+
+    <div class="menu-item" onclick="toggleSection('pendidikan')">🎓 Pendidikan</div>
+    <div id="pendidikan" class="content">
+      <p>Universitas Andalas — Program Studi Teknik Komputer<br>Fokus pada jaringan komputer dan pemrograman web.</p>
+    </div>
+
+    <div class="menu-item" onclick="toggleSection('hobi')">⭐ Hobi</div>
+    <div id="hobi" class="content">
+      <p>Saya suka mendesain, belajar coding, menonton film, dan eksplor hal-hal kreatif di dunia digital.</p>
+    </div>
+
+    <div class="menu-item" onclick="toggleSection('citacita')">⏰ Cita-cita</div>
+    <div id="citacita" class="content">
+      <p>Ingin menjadi seorang Software Engineer yang sukses dan bisa membuat teknologi yang bermanfaat bagi banyak orang.</p>
+    </div>
+
+    <div class="footer">© 2026 Najwa Azzahra</div>
+
   </div>
 
+  <script src="script.js"></script>
 </body>
 </html>
