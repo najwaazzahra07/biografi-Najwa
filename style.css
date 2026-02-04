@@ -230,11 +230,13 @@ body::before {
     height: 22px;
     stroke-width: 2;
     color: rgba(255, 255, 255, 0.9);
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(102, 126, 234, 0.3));
 }
 
 .section-btn:hover .section-icon {
     transform: scale(1.1);
+    filter: drop-shadow(0 3px 6px rgba(102, 126, 234, 0.5));
 }
 
 /* Modal Styles */
@@ -296,45 +298,15 @@ body::before {
     }
 }
 
-.modal-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    background: rgba(0, 0, 0, 0.1);
-    border: none;
-    font-size: 24px;
-    color: #333;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-
-.modal-close:hover {
-    background: rgba(0, 0, 0, 0.2);
-    transform: rotate(90deg);
-}
-
 .modal-body h2 {
     font-size: 28px;
     color: #2d3436;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.modal-body h2::before {
-    content: '';
-    display: inline-block;
-    width: 5px;
-    height: 30px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 3px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    border-image-slice: 1;
+    font-weight: 600;
 }
 
 .modal-body p {
@@ -383,8 +355,7 @@ body::before {
 .modal-body .hobby-item {
     display: flex;
     align-items: center;
-    gap: 15px;
-    padding: 18px;
+    padding: 20px;
     border-radius: 12px;
     transition: transform 0.3s ease;
 }
@@ -405,19 +376,16 @@ body::before {
     transform: scale(1.02);
 }
 
-.modal-body .hobby-icon {
-    font-size: 32px;
-}
-
 .modal-body .hobby-text h4 {
-    font-size: 17px;
+    font-size: 18px;
     color: white;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    font-weight: 600;
 }
 
 .modal-body .hobby-text p {
-    font-size: 14px;
+    font-size: 15px;
     color: rgba(255, 255, 255, 0.95);
     margin: 0;
 }
@@ -429,16 +397,13 @@ body::before {
     text-align: center;
 }
 
-.modal-body .goal-icon {
-    font-size: 48px;
-    margin-bottom: 15px;
-}
-
 .modal-body .goal-box p {
     color: white;
     font-size: 17px;
     font-weight: 500;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    line-height: 1.7;
+    margin: 0;
 }
 
 /* Responsive */
