@@ -2,56 +2,71 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
   -webkit-tap-highlight-color: transparent;
 }
 
-/* ===== BACKGROUND COKLAT SMOOTH ===== */
 body {
-  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-
   background: linear-gradient(135deg, #5c3b2e, #8b5e3c, #c08a5b);
-  background-attachment: fixed;
-
-  animation: fadeIn 1s ease;
 }
 
-/* Animasi halus saat halaman muncul */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+
+/* Warna-warna kombinasi coklat */
+.decor span:nth-child(1) { background: #f5deb3; top: 10%; left: 20%; animation-delay: 0s; }
+.decor span:nth-child(2) { background: #e6c7a1; top: 25%; left: 80%; animation-delay: 2s; }
+.decor span:nth-child(3) { background: #ffffff; top: 70%; left: 15%; animation-delay: 4s; }
+.decor span:nth-child(4) { background: #d2b48c; top: 60%; left: 75%; animation-delay: 1s; }
+.decor span:nth-child(5) { background: #fff5e1; top: 40%; left: 50%; animation-delay: 3s; }
+.decor span:nth-child(6) { background: #f5deb3; top: 85%; left: 35%; animation-delay: 5s; }
+.decor span:nth-child(7) { background: #e6c7a1; top: 15%; left: 60%; animation-delay: 6s; }
+.decor span:nth-child(8) { background: #ffffff; top: 75%; left: 55%; animation-delay: 7s; }
+.decor span:nth-child(9) { background: #d2b48c; top: 35%; left: 10%; animation-delay: 8s; }
+.decor span:nth-child(10){ background: #fff5e1; top: 55%; left: 85%; animation-delay: 9s; }
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
 }
 
-/* ===== WRAPPER ===== */
-.wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-}
-
-/* ===== KARTU UTAMA ===== */
-.card {
-  width: 100%;
-  max-width: 380px;
-  padding: 30px 20px;
-  border-radius: 25px;
+/* ===== KONTEN ===== */
+.container {
+  position: relative;
+  z-index: 1;
+  width: 90%;
+  max-width: 400px;
   text-align: center;
-
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(15px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-
-  transition: 0.4s ease;
 }
 
-/* ===== AVATAR ===== */
+.profile-header {
+  margin-bottom: 30px;
+  color: white;
+}
+
 .avatar {
   width: 110px;
   height: 110px;
-  margin: 0 auto 15px;
-  border-radius: 50%;
   background: linear-gradient(135deg, #f5deb3, #e6c7a1);
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: 600;
+  color: #5c3b2e;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.profile-header h1 {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.profile-header p {
+  font-size: 14px;
+  opacity:
