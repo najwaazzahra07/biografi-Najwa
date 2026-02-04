@@ -62,6 +62,9 @@ body {
 }
 
 .menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: rgba(255,255,255,0.2);
   padding: 15px 18px;
   border-radius: 15px;
@@ -74,6 +77,11 @@ body {
 .menu-item:hover {
   background: rgba(255,255,255,0.35);
   transform: scale(1.03);
+}
+
+.menu-item svg {
+  width: 20px;
+  height: 20px;
 }
 
 .content {
